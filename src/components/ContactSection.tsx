@@ -105,7 +105,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <h3 className="font-display text-[15px] font-bold text-white">
                     WhatsApp directo
                   </h3>
-                  <span className="text-xs text-[#2DD4BF] font-bold">{CONTACT_INFO.phoneDisplay}</span>
+                  <span className="text-xs text-[#2DD4BF] font-bold">Respuesta rápida</span>
                 </div>
               </div>
 
