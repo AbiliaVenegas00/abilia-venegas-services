@@ -90,14 +90,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToContact }) => 
               {/* Abilia Desk/Phone Avatar */}
               <div className="relative mx-auto w-60 sm:w-72 lg:w-80 h-auto flex items-center justify-center">
                 <img
-                  src="Gemini_Generated_Image_r1ezsqr1ezsqr1ez-removebg-preview.png"
+                  src="./avatar.png"
                   alt="Abilia Venegas - Atención y Respuestas Directas"
                   className="w-full h-auto max-h-[380px] object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.14)] animate-float-slow select-none transition-transform duration-300 hover:scale-103"
                   loading="lazy"
                   onError={(e) => {
                     const target = e.currentTarget;
-                    if (!target.src.includes('Gemini_Generated_Image_3n3t713n3t713n3t')) {
-                      target.src = 'Gemini_Generated_Image_3n3t713n3t713n3t.png';
+                    if (!target.src.endsWith('/avatar.png')) {
+                      target.src = './avatar.png';
                     }
                   }}
                 />
