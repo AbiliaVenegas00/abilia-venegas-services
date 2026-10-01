@@ -24,7 +24,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     }
   }, [prefilledMessage]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg('');
 
@@ -39,10 +39,28 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch('https://formsubmit.co/ajax/abiliavenegas00@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: nombre.trim(),
+          Correo: correo.trim(),
+          Mensaje: mensaje.trim(),
+          _subject: `✉️ Nuevo Mensaje desde Portafolio: ${nombre.trim()}`,
+          _template: 'table',
+          _autoresponse: `Hola ${nombre.trim()},\n\nGracias por escribirme. He recibido tu mensaje y te responderé en menos de 24 horas con toda la información solicitada.\n\nTu mensaje:\n"${mensaje.trim()}"\n\nSaludos cordiales,\nAbilia Venegas · Ingeniera en Informática & Full Stack\nWhatsApp: ${CONTACT_INFO.phoneDisplay}`
+        })
+      });
+    } catch (err) {
+      console.warn('FormSubmit contact notice:', err);
+    } finally {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 600);
+    }
   };
 
   const currentWhatsappUrl = `https://wa.me/${CONTACT_INFO.phoneClean}?text=${encodeURIComponent(
