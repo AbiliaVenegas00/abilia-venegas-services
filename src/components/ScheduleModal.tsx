@@ -48,10 +48,10 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ isOpen, onClose })
             </div>
             <div>
               <h3 className="font-display text-[17px] font-bold text-white">
-                Agenda una llamada de 15 minutos
+                Llamada y Diagnóstico Gratuito (15 min)
               </h3>
-              <p className="text-xs text-gray-400">
-                Sin costo ni compromiso · Vía Google Meet
+              <p className="text-xs text-[#2DD4BF] font-semibold">
+                Auditoría y asesoría 100% gratuita · Sin compromiso · Vía Google Meet
               </p>
             </div>
           </div>

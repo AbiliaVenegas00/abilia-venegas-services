@@ -47,7 +47,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch text-left">
           {SERVICES_DATA.map((service, index) => {
             const IconComponent = getIcon(service.iconName);
-            const isFeatured = service.featured;
+            const isYellow = service.id === 'sitios-web' || service.id === 'automatizacion-ia';
+            const isMint = service.id === 'moodle-lms' || service.id === 'infraestructura-ciberseguridad';
             const delayClass = `delay-${index + 1}`;
 
             return (
@@ -56,14 +57,32 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 className={`card-hover-fx relative rounded-2xl p-6 flex flex-col justify-between group scroll-reveal ${delayClass} ${
                   isInView ? 'is-visible' : ''
                 } ${
-                  isFeatured
-                    ? 'bg-[#2A1F29] border-2 border-[#F8C8D8] shadow-xl hover:border-[#F8C8D8] hover:shadow-[0_16px_36px_-10px_rgba(248,200,216,0.3)]'
+                  isYellow
+                    ? 'bg-[#241C23] border-yellow-strong shadow-lg'
+                    : isMint
+                    ? 'bg-[#241C23] border-mint-strong shadow-lg'
                     : 'bg-[#241C23] border border-[#3E2D3B] shadow-md hover:border-[#2DD4BF]'
                 }`}
               >
-                {isFeatured && (
-                  <div className="absolute -top-3 right-6 bg-[#F8C8D8] text-[#14171E] border border-[#F0B8C9] text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full shadow-xs animate-bounce" style={{ animationDuration: '4s' }}>
-                    Servicio Estrella
+                {/* Badges for Yellow & Mint Services */}
+                {service.id === 'sitios-web' && (
+                  <div className="absolute -top-3 right-6 bg-[#EAB308] text-[#14171E] border border-[#FACC15] text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full shadow-xs">
+                    ★ Servicio Estrella
+                  </div>
+                )}
+                {service.id === 'automatizacion-ia' && (
+                  <div className="absolute -top-3 right-6 bg-[#EAB308] text-[#14171E] border border-[#FACC15] text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full shadow-xs">
+                    ⚡ Alta Demanda
+                  </div>
+                )}
+                {service.id === 'moodle-lms' && (
+                  <div className="absolute -top-3 right-6 bg-[#2DD4BF] text-[#0A201C] border border-[#5EEAD4] text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full shadow-xs">
+                    🎓 LMS & E-Learning
+                  </div>
+                )}
+                {service.id === 'infraestructura-ciberseguridad' && (
+                  <div className="absolute -top-3 right-6 bg-[#2DD4BF] text-[#0A201C] border border-[#5EEAD4] text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full shadow-xs">
+                    🛡️ Infraestructura TI
                   </div>
                 )}
 
@@ -71,8 +90,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   <div className="flex items-center gap-3 mb-2.5">
                     <div
                       className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 ${
-                        isFeatured
-                          ? 'bg-[#F8C8D8] text-[#14171E]'
+                        isYellow
+                          ? 'bg-[#EAB308]/20 text-[#FACC15] border border-[#EAB308]/40'
+                          : isMint
+                          ? 'bg-[#0E2924] text-[#2DD4BF] border border-[#175248]'
                           : 'bg-[#352331] text-[#F8C8D8] border border-[#F8C8D8]/20 group-hover:text-[#2DD4BF] group-hover:border-[#2DD4BF]/40'
                       }`}
                     >
@@ -104,8 +125,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   <button
                     onClick={() => onSelectService(service)}
                     className={`btn-shimmer w-full py-2.5 px-4 rounded-xl font-bold text-[13px] transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 ${
-                      isFeatured
-                        ? 'bg-[#F8C8D8] hover:bg-[#F2B4C7] text-[#14171E] border border-[#F0B8C9] shadow-xs'
+                      isYellow
+                        ? 'bg-[#EAB308] hover:bg-[#FACC15] text-[#14171E] font-bold shadow-xs'
+                        : isMint
+                        ? 'bg-[#2DD4BF] hover:bg-[#5EEAD4] text-[#0A201C] font-bold shadow-xs'
                         : 'bg-[#352331] hover:bg-[#432C3E] text-white border border-[#4E3448] hover:border-[#2DD4BF]/50'
                     }`}
                   >

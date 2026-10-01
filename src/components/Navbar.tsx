@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSchedule }) => {
             className="bg-[#F8C8D8] hover:bg-[#F3BACB] text-[#111318] font-bold text-[14px] px-5 py-2.5 rounded-[12px] border border-[#F0A9BD] shadow-2xs hover:shadow-xs transition-all duration-200 flex items-center gap-2 cursor-pointer active:scale-[0.98]"
           >
             <Calendar className="w-4 h-4 text-[#8C2C47]" />
-            <span>Agenda una llamada</span>
+            <span>Llamada Gratuita</span>
           </button>
         </nav>
 
@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSchedule }) => {
               className="mt-2 w-full bg-[#F8C8D8] hover:bg-[#F3BACB] text-[#111318] py-3 rounded-[12px] font-bold flex items-center justify-center gap-2 border border-[#F0A9BD] shadow-xs text-center"
             >
               <Calendar className="w-4 h-4 text-[#8C2C47]" />
-              <span>Agenda una llamada</span>
+              <span>Llamada Gratuita</span>
             </button>
           </div>
         </div>

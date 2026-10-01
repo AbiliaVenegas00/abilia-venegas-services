@@ -23,12 +23,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule, onScrollToProjects }
           {/* Left Column */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Tag with gentle hover glow */}
-            <div className="mb-3.5 inline-flex items-center group cursor-default">
-              <span className="text-[11.5px] font-bold uppercase tracking-wider text-[#8E2E4B] bg-[#FDF4F7] px-3 py-1 rounded-md border border-[#F0B8C9]/80 flex items-center gap-1.5 shadow-2xs group-hover:border-[#2DD4BF]/60 transition-colors">
-                <Sparkles className="w-3 h-3 text-[#2DD4BF] animate-spin" style={{ animationDuration: '6s' }} />
-                <span>INGENIERÍA EN INFORMÁTICA · FULL STACK & IA</span>
-              </span>
+            {/* Hook de Alto Impacto: Auditorías, Llamadas y Diagnósticos GRATUITOS */}
+            <div className="mb-4 inline-flex items-center group cursor-default">
+              <div className="bg-[#241C23] text-white px-3.5 py-1.5 rounded-full border border-[#2DD4BF]/70 shadow-sm flex items-center gap-2 text-[12px] sm:text-[13px] font-medium transition-all group-hover:border-[#2DD4BF]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2DD4BF] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DD4BF]" />
+                </span>
+                <span className="text-gray-200">
+                  Auditorías, llamadas de 15 min y diagnósticos{' '}
+                  <span className="text-[#2DD4BF] font-extrabold uppercase tracking-wide">
+                    100% GRATUITOS
+                  </span>
+                </span>
+              </div>
             </div>
 
             {/* H1 with tight tracking */}
@@ -60,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule, onScrollToProjects }
                 className="btn-shimmer bg-[#F8C8D8] hover:bg-[#F2B4C7] text-[#14171E] text-[14.5px] font-bold px-5 py-3 rounded-xl border border-[#F0B8C9] shadow-sm hover:shadow-[0_10px_25px_-5px_rgba(248,200,216,0.5)] transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
               >
                 <Calendar className="w-4 h-4 text-[#8E2E4B]" />
-                <span>Agenda una llamada (15 min)</span>
+                <span>Agenda una llamada gratuita (15 min)</span>
               </button>
 
               <button
