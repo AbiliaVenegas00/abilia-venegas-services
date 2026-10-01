@@ -4,12 +4,14 @@ interface AbiliaAvatarProps {
   className?: string;
   size?: 'hero' | 'about';
   src?: string;
+  objectPosition?: string;
 }
 
 export const AbiliaAvatar: React.FC<AbiliaAvatarProps> = ({
   className = '',
   size = 'hero',
-  src
+  src,
+  objectPosition
 }) => {
   const defaultSrc = src || (size === 'about' ? './devabilia.jpg' : './abilia.png');
   const [avatarSrc, setAvatarSrc] = useState<string>(defaultSrc);
@@ -31,6 +33,7 @@ export const AbiliaAvatar: React.FC<AbiliaAvatarProps> = ({
   }, [src, size]);
 
   const heightClass = size === 'hero' ? 'h-[440px] sm:h-[480px]' : 'h-[360px] sm:h-[400px]';
+  const positionClass = objectPosition || (size === 'about' ? 'object-center' : 'object-top');
 
   const handleImageError = () => {
     if (avatarSrc.startsWith('./')) {
@@ -47,7 +50,7 @@ export const AbiliaAvatar: React.FC<AbiliaAvatarProps> = ({
         <img
           src={avatarSrc}
           alt="Abilia Venegas - Ingeniera en Informática & Full Stack Developer"
-          className={`w-full ${heightClass} object-cover object-top rounded-2xl shadow-md border border-[#2D3342] bg-[#161922]`}
+          className={`w-full ${heightClass} object-cover ${positionClass} rounded-2xl shadow-md border border-[#2D3342] bg-[#161922]`}
           loading={size === 'hero' ? 'eager' : 'lazy'}
           onError={handleImageError}
         />

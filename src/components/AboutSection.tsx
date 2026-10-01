@@ -23,7 +23,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onScrollToContact })
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative max-w-[340px] mx-auto lg:max-w-none group">
               <div className="transition-transform duration-500 group-hover:scale-[1.015]">
-                <AbiliaAvatar size="about" src="./devabilia.jpg" />
+                <AbiliaAvatar size="about" src="./devabilia.jpg" objectPosition="object-center" />
               </div>
             </div>
           </div>

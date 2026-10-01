@@ -85,14 +85,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToContact }) => 
 
           {/* Right Side: Abilia Avatar directly on section background without card box */}
           <div className={`lg:col-span-5 flex flex-col items-center justify-center lg:sticky lg:top-24 scroll-reveal delay-2 ${isInView ? 'is-visible' : ''}`}>
-            <div className="w-full max-w-[420px] mx-auto flex flex-col items-center justify-center text-center py-4">
+            <div className="w-full max-w-[500px] lg:max-w-[540px] mx-auto flex flex-col items-center justify-center text-center py-2">
               
-              {/* Abilia Desk/Phone Avatar */}
-              <div className="relative mx-auto w-60 sm:w-72 lg:w-80 h-auto flex items-center justify-center">
+              {/* Abilia Desk/Phone Avatar - Increased Size */}
+              <div className="relative mx-auto w-72 sm:w-88 lg:w-full h-auto flex items-center justify-center">
                 <img
                   src="./avatar.png"
                   alt="Abilia Venegas - Atención y Respuestas Directas"
-                  className="w-full h-auto max-h-[380px] object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.14)] animate-float-slow select-none transition-transform duration-300 hover:scale-103"
+                  className="w-full h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-[540px] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.16)] animate-float-slow select-none transition-transform duration-300 hover:scale-103"
                   loading="lazy"
                   onError={(e) => {
                     const target = e.currentTarget;

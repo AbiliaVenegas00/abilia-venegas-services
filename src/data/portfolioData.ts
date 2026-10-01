@@ -333,8 +333,8 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: '¿Cuánto cuesta un proyecto?',
-    answer: 'Presupuesto cerrado según el alcance pactado. Sitios web desde $8,500 MXN. Moodle e IA se cotizan a la medida.',
-    highlight: 'Sitios desde $8,500 MXN'
+    answer: 'Presupuesto cerrado y sin sorpresas. Sitios web y landing pages desde $3,500 MXN. Plataformas Moodle e integraciones con IA se cotizan a la medida de tu negocio.',
+    highlight: 'Sitios desde $3,500 MXN'
   },
   {
     id: 'faq-2',
