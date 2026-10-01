@@ -3,7 +3,11 @@ import { ChevronDown } from 'lucide-react';
 import { FAQS_DATA } from '../data/portfolioData';
 import { useInView } from '../hooks/useInView';
 
-export const FaqSection: React.FC = () => {
+interface FaqSectionProps {
+  onScrollToContact?: (customMessage?: string) => void;
+}
+
+export const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToContact }) => {
   const [openId, setOpenId] = useState<string | null>('faq-1');
   const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.1 });
 
