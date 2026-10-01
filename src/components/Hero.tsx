@@ -40,18 +40,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule, onScrollToProjects }
             </div>
 
             {/* H1 with tight tracking */}
-            <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] font-bold text-[#14171E] leading-[1.12] tracking-tight mb-4 max-w-[620px]">
-              Tu sitio web y tecnología, en manos de una sola experta.
+            <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] font-bold text-[#14171E] leading-[1.12] tracking-tight mb-4 max-w-[660px]">
+              Automatización con IA y desarrollo tecnológico, en manos de una sola experta.
             </h1>
 
             {/* Subtítulo minimalista */}
-            <p className="text-[16px] sm:text-[17px] text-[#5C6470] leading-[1.55] max-w-[560px] mb-5">
-              Desarrollo web a la medida, administración segura de servidores y automatización de procesos con Inteligencia Artificial.
+            <p className="text-[16px] sm:text-[17px] text-[#5C6470] leading-[1.55] max-w-[580px] mb-5">
+              Automatización de flujos de trabajo con Inteligencia Artificial, desarrollo web de alto impacto y gestión segura de infraestructura para tu negocio.
             </p>
 
             {/* Interactive keyword tags with micro-scale on hover */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-[#8E2E4B] mb-7">
-              {['Web Full Stack', 'Automatización IA', 'Moodle LMS', 'Ciberseguridad TI'].map((tag, idx) => (
+              {['Automatización IA', 'Desarrollo Web Full Stack', 'Moodle LMS', 'Ciberseguridad TI'].map((tag, idx) => (
                 <span
                   key={idx}
                   className="bg-white/80 hover:bg-white text-[#14171E] hover:text-[#2DD4BF] border border-[#E8E4DD] hover:border-[#2DD4BF]/50 px-2.5 py-1 rounded-lg shadow-2xs transition-all duration-200 hover:-translate-y-0.5 cursor-default"
