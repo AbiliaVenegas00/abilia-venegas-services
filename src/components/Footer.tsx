@@ -104,10 +104,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenSchedule })
               href={CONTACT_INFO.behanceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Behance"
-              className="w-8 h-8 rounded-lg bg-[#282127] border border-[#3F323D] hover:border-white/40 text-gray-300 hover:text-white flex items-center justify-center transition-colors"
+              aria-label="Portafolio Behance de Abilia Venegas"
+              className="w-8 h-8 rounded-lg bg-[#282127] border border-[#3F323D] hover:border-[#F8C8D8]/80 text-gray-300 hover:text-[#F8C8D8] flex items-center justify-center transition-colors"
             >
-              <Globe className="w-3.5 h-3.5" />
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-4.102 0-5.625-3.001-5.625-5.969 0-3.032 1.761-6.031 5.563-6.031 4.093 0 5.438 3.016 5.438 6.203 0 .422-.047.875-.078 1.094h-8.156c.094 1.766 1.078 3.031 2.875 3.031 1.297 0 2.25-.688 2.656-1.328h2.428zm-7.984-3.5h5.484c-.109-1.344-.922-2.344-2.656-2.344-1.688 0-2.641.984-2.828 2.344zm-9.742 5.5h-6v-14h6.078c3.219 0 4.922 1.344 4.922 3.844 0 1.578-.859 2.766-2.281 3.328 1.844.5 2.641 1.953 2.641 3.594 0 2.594-1.922 3.234-5.36 3.234zm-3.328-11.594v3.188h2.625c1.438 0 2.156-.563 2.156-1.578 0-1.047-.781-1.61-2.188-1.61h-2.593zm0 5.438v3.719h2.828c1.516 0 2.391-.656 2.391-1.875 0-1.25-.875-1.844-2.453-1.844h-2.766z"/>
+              </svg>
             </a>
           </div>
 

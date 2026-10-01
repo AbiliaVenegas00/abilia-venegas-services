@@ -40,7 +40,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
     setIsSubmitting(true);
     try {
-      await fetch('https://formsubmit.co/ajax/abiliavenegas00@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/abiliavblossom@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

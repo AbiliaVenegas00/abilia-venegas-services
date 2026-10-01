@@ -64,10 +64,10 @@ export const CONTACT_INFO = {
   title: 'Ingeniera en Informática · Full Stack & AI',
   phoneDisplay: '+52 462 245 0193',
   phoneClean: '524622450193',
-  email: 'abiliavenegas00@gmail.com',
+  email: 'abiliavblossom@gmail.com',
   whatsappUrl: 'https://wa.me/524622450193?text=Hola%20Abilia,%20quiero%20cotizar%20un%20proyecto',
-  linkedinUrl: 'https://linkedin.com',
-  behanceUrl: 'https://behance.net'
+  linkedinUrl: 'https://www.linkedin.com/in/abilia-venegas-dep',
+  behanceUrl: 'https://www.behance.net/abiliavg'
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
