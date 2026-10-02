@@ -309,7 +309,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Directora Comercial',
     company: 'VANGAL',
     relationship: 'Supervisaba directamente a Abilia',
-    avatar: 'karla.jpeg'
+    avatar: '/karla.jpeg'
   },
   {
     id: 'test-karen-elias',
@@ -318,7 +318,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Gerente de Ventas Bajío y Norte',
     company: 'NETSKY SOLUTIONS',
     relationship: 'Supervisaba directamente a Abilia',
-    avatar: 'karen.jpeg'
+    avatar: '/karen.jpeg'
   },
   {
     id: 'test-3',
