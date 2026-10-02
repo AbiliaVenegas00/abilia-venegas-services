@@ -34,13 +34,16 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Header with Scroll Animation */}
-        <div className={`max-w-[540px] mb-8 text-left scroll-reveal ${isInView ? 'is-visible' : ''}`}>
+        <div className={`max-w-[640px] mb-8 text-left scroll-reveal ${isInView ? 'is-visible' : ''}`}>
           <span className="text-[11px] font-bold uppercase tracking-wider text-[#A83B5E] mb-1 block">
-            Servicios
+            Servicios 100% Personalizados
           </span>
           <h2 className="font-display text-[26px] sm:text-[32px] font-bold text-[#14171E] tracking-tight leading-tight">
-            Cómo puedo ayudarte
+            Tecnología adaptada a tus necesidades y gustos
           </h2>
+          <p className="text-[14.5px] text-[#5C6470] mt-1.5 leading-relaxed">
+            Cada desarrollo se construye desde cero para tu negocio: sin plantillas genéricas ni soluciones rígidas.
+          </p>
         </div>
 
         {/* Services Cards with Staggered Scroll Animation & Interactive Lift */}
@@ -148,10 +151,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             </div>
             <div>
               <p className="text-[13.5px] font-bold text-white">
-                ¿Buscas también identidad de marca o campañas publicitarias?
+                ¿Buscas también diseño de identidad visual o estilo de marca a tu gusto?
               </p>
               <p className="text-xs text-gray-300">
-                Diseño logos, manuales de marca y anuncios visuales para tu negocio.
+                Diseño logotipos, paletas cromáticas accesibles y piezas visuales 100% coordinadas con tu proyecto.
               </p>
             </div>
           </div>

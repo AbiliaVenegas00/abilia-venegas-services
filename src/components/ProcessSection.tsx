@@ -61,7 +61,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenSchedule }
           <div className="flex items-center gap-3">
             <CheckCircle2 className="w-5 h-5 text-[#2DD4BF] shrink-0 group-hover:scale-115 transition-transform" />
             <p className="text-[13px] text-gray-200">
-              <strong className="text-white">Autonomía total:</strong> Código, servidores y accesos son 100% de tu propiedad.
+              <strong className="text-white">100% Hecho a tu medida:</strong> Cero plantillas genéricas. Código limpio, servidores propios y tecnología que se adapta fielmente a tus gustos y necesidades.
             </p>
           </div>
 

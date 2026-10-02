@@ -44,13 +44,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onScrollToContact })
               </p>
 
               <p>
-                Enfoque directo: soluciones que <strong className="text-[#2DD4BF]">captan clientes, ahorran horas operativas</strong> y te garantizan 100% de propiedad del código.
+                <strong className="text-[#2DD4BF]">Mi gran diferencial:</strong> Cero plantillas genéricas. Me tomo el tiempo de escuchar tus gustos estéticos, entender a fondo las necesidades de tu negocio y diseñar una solución tecnológica que encaje perfectamente contigo y con tu equipo.
               </p>
             </div>
 
             {/* Badges with Lift & Glow */}
             <div className="flex flex-wrap gap-2 my-4 text-xs font-bold">
-              {['Trato directo', 'Código 100% tuyo', 'Soporte garantizado'].map((text, idx) => (
+              {['100% A tu gusto y medida', 'Cero plantillas genéricas', 'Código 100% tuyo', 'Trato directo'].map((text, idx) => (
                 <span
                   key={idx}
                   className="card-hover-fx bg-[#241C23] hover:bg-[#2C212A] text-white border border-[#3E2D3B] hover:border-[#2DD4BF]/60 px-3 py-1.5 rounded-xl flex items-center gap-1.5 shadow-xs cursor-default"

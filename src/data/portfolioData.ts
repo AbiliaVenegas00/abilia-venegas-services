@@ -92,8 +92,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     featured: false,
     bulletPoints: [
       'Agentes y flujos automáticos 24/7',
-      'Generación inteligente de contenidos',
-      'Integración de APIs (Gemini, Claude, GPT)'
+      'Automatización de tareas',
+      'Soluciones a problemas específicos'
     ],
     ctaText: 'Automatizar procesos →',
     defaultMessage: 'Hola Abilia, quiero automatizar tareas y procesos en mi negocio con IA.',
@@ -219,29 +219,29 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const WORK_PROCESS_STEPS = [
   {
     step: '01',
-    title: 'Descubrimiento',
-    description: 'Diagnóstico rápido de 15 minutos para definir requerimientos clave.',
+    title: 'Tus Gustos & Necesidades',
+    description: 'Conversamos sobre tu visión, estilo visual preferido y flujos de trabajo para crear algo único para ti.',
     duration: '15 min · Sin costo',
-    badge: 'Sin costo'
+    badge: '100% Personalizado'
   },
   {
     step: '02',
-    title: 'Propuesta',
-    description: 'Alcance técnico detallado, fechas de entrega y precio cerrado.',
+    title: 'Propuesta a tu Medida',
+    description: 'Arquitectura adaptada a tus gustos, alcance técnico claro, fechas y presupuesto cerrado.',
     duration: '24 a 48 hrs',
-    badge: 'Precio cerrado'
+    badge: 'Sin sorpresas'
   },
   {
     step: '03',
-    title: 'Desarrollo',
-    description: 'Construcción con código limpio, pruebas continuas y avances visibles.',
+    title: 'Desarrollo Dedicado',
+    description: 'Construcción con código limpio, revisiones periódicas contigo y adaptaciones en tiempo real.',
     duration: 'Iterativo',
     badge: 'Avances continuos'
   },
   {
     step: '04',
-    title: 'Entrega',
-    description: 'Puesta en marcha, entrega de credenciales maestras y capacitación.',
+    title: 'Entrega & Capacitación',
+    description: 'Puesta en marcha, entrega de accesos maestros y capacitación para que tengas control total.',
     duration: '30 días garantía',
     badge: '100% tuyo'
   }
@@ -309,15 +309,16 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Directora Comercial',
     company: 'VANGAL',
     relationship: 'Supervisaba directamente a Abilia',
-    avatar: 'image.png'
+    avatar: '/karla.jpeg'
   },
   {
-    id: 'test-2',
-    quote: 'Entrega puntual, código rápido y servidores estables. Nuestras consultas se triplicaron tras el lanzamiento.',
-    name: 'Ing. Roberto Méndez',
-    role: 'Gerente de Operaciones',
-    company: 'Logística & Suministros MX',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
+    id: 'test-karen-elias',
+    quote: 'Excelente Profesional, una persona muy dedicada, entusiasta, participativa, creativa, responsable y con bastante disposición para colaborar con sus compañeros, proponer ideas, desarrollar mejoras, autodidacta, con grandes habilidades para soporte TI, gestión de correo, nube, herramientas de colaboración y marketing digital... gracias por toda tu entrega, por ser tan servicial y tener una gran actitud!!! Que sigas creciendo en todos los aspectos, sigue creando, aprendiendo y superando cada reto... un placer trabajar contigo siempre!!! ÉXITO :)',
+    name: 'Karen Elías',
+    role: 'Gerente de Ventas Bajío y Norte',
+    company: 'NETSKY SOLUTIONS',
+    relationship: 'Supervisaba directamente a Abilia',
+    avatar: '/karen.jpeg'
   },
   {
     id: 'test-3',
@@ -333,8 +334,8 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: '¿Cuánto cuesta un proyecto?',
-    answer: 'Presupuesto cerrado y sin sorpresas. Sitios web y landing pages desde $3,500 MXN. Plataformas Moodle e integraciones con IA se cotizan a la medida de tu negocio.',
-    highlight: 'Sitios desde $3,500 MXN'
+    answer: 'Presupuesto cerrado y sin sorpresas. Sitios web y landing pages desde $3,500 MXN (pago único, sin mensualidades forzosas). Plataformas Moodle e integraciones con IA se cotizan a la medida de tu negocio.',
+    highlight: 'Sitios desde $3,500 MXN (Pago único)'
   },
   {
     id: 'faq-2',

@@ -6,23 +6,23 @@ export const ProblemsSection: React.FC = () => {
     {
       id: 1,
       icon: Gauge,
-      problem: '“Mi web es lenta y no genera prospectos.”',
-      solution: 'Rediseño con carga < 1s y embudo optimizado.',
-      tag: 'Más conversión'
+      problem: '“Las plantillas genéricas no reflejan mis gustos ni se adaptan a mi negocio.”',
+      solution: 'Diseño y desarrollo 100% a la medida de tu identidad y procesos.',
+      tag: 'Cero plantillas'
     },
     {
       id: 2,
       icon: Clock,
-      problem: '“Demasiadas horas en tareas manuales.”',
-      solution: 'Automatización con IA y conexión de apps 24/7.',
+      problem: '“Demasiadas horas perdidas en tareas manuales y repetitivas.”',
+      solution: 'Automatización con IA adaptada al ritmo y flujo exacto de tu equipo.',
       tag: 'Ahorro de tiempo'
     },
     {
       id: 3,
       icon: ShieldAlert,
-      problem: '“Servidores sin respaldo ni seguridad clara.”',
-      solution: 'Blindaje de infraestructura y copias cifradas.',
-      tag: 'Disponibilidad 99.9%'
+      problem: '“Sistemas rígidos o servidores sin respaldo ni soporte directo.”',
+      solution: 'Infraestructura a tu medida, código 100% tuyo y soporte personal.',
+      tag: 'Trato directo'
     }
   ];
 

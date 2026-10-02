@@ -44,14 +44,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSchedule, onScrollToProjects }
               Automatización con IA y desarrollo tecnológico, en manos de una sola experta.
             </h1>
 
-            {/* Subtítulo minimalista */}
-            <p className="text-[16px] sm:text-[17px] text-[#5C6470] leading-[1.55] max-w-[580px] mb-5">
-              Automatización de flujos de trabajo con Inteligencia Artificial, desarrollo web de alto impacto y gestión segura de infraestructura para tu negocio.
+            {/* Subtítulo enfocado en personalización a necesidades y gustos */}
+            <p className="text-[16px] sm:text-[17px] text-[#5C6470] leading-[1.55] max-w-[620px] mb-5">
+              Automatización de flujos con Inteligencia Artificial y desarrollo web <strong className="text-[#14171E] font-bold">100% personalizados a las necesidades, procesos y gustos de cada cliente</strong>. Cero plantillas genéricas: tecnología construida a tu medida exacta.
             </p>
 
             {/* Interactive keyword tags with micro-scale on hover */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-[#8E2E4B] mb-7">
-              {['Automatización IA', 'Desarrollo Web Full Stack', 'Moodle LMS', 'Ciberseguridad TI'].map((tag, idx) => (
+              {['100% A tu gusto', 'Automatización IA', 'Web Full Stack a medida', 'Cero plantillas', 'Infraestructura TI'].map((tag, idx) => (
                 <span
                   key={idx}
                   className="bg-white/80 hover:bg-white text-[#14171E] hover:text-[#2DD4BF] border border-[#E8E4DD] hover:border-[#2DD4BF]/50 px-2.5 py-1 rounded-lg shadow-2xs transition-all duration-200 hover:-translate-y-0.5 cursor-default"
