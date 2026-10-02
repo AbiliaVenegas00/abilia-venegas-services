@@ -2,17 +2,6 @@ import React from 'react';
 import { Quote, Star, CheckCircle } from 'lucide-react';
 import { TESTIMONIALS_DATA } from '../data/portfolioData';
 
-// Helper to reliably resolve paths across local preview, root domains, and GitHub Pages subpaths
-const resolveAvatarPath = (avatar: string) => {
-  if (!avatar) return '';
-  if (avatar.startsWith('http://') || avatar.startsWith('https://')) {
-    return avatar;
-  }
-  const cleanPath = avatar.startsWith('./') ? avatar.slice(2) : avatar.startsWith('/') ? avatar.slice(1) : avatar;
-  const baseUrl = import.meta.env.BASE_URL || './';
-  return baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
-};
-
 export const TestimonialsSection: React.FC = () => {
   return (
     <section className="py-14 lg:py-20 bg-[#121114] text-white border-b border-[#2C2C2C] relative overflow-hidden">
@@ -74,23 +63,13 @@ export const TestimonialsSection: React.FC = () => {
               <div className="pt-3 border-t border-white/15 relative z-10">
                 <div className="flex items-center gap-3 mb-1.5">
                   <img
-                    src={resolveAvatarPath(item.avatar)}
+                    src={item.avatar}
                     alt={item.name}
                     className="w-10 h-10 rounded-full object-cover object-top border-2 border-[#2DD4BF]/50 group-hover:border-[#2DD4BF] shadow-xs transition-colors shrink-0"
                     loading="lazy"
                     onError={(e) => {
-                      const target = e.currentTarget;
-                      // If it ended in .jpeg, try .jpg in case user uploaded .jpg
-                      if (target.src.endsWith('.jpeg')) {
-                        target.src = target.src.replace('.jpeg', '.jpg');
-                        return;
-                      }
-                      // If it ended in .jpg, try .png
-                      if (target.src.endsWith('.jpg')) {
-                        target.src = target.src.replace('.jpg', '.png');
-                        return;
-                      }
                       // Fallback in case of local load issue
+                      const target = e.currentTarget;
                       if (!target.src.includes('unsplash')) {
                         target.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80';
                       }

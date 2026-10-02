@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProblemsSection } from './components/ProblemsSection';
@@ -20,7 +20,6 @@ import { ScheduleModal } from './components/ScheduleModal';
 import { ProjectModal } from './components/ProjectModal';
 import { PrivacyModal } from './components/PrivacyModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
-import { NotFoundPage } from './components/NotFoundPage';
 import { ServiceItem, ProjectItem } from './data/portfolioData';
 
 export default function App() {
@@ -28,47 +27,6 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [prefilledMessage, setPrefilledMessage] = useState('');
-
-  // Check if current path should trigger the 404 page
-  const getIsNotFound = () => {
-    if (typeof window === 'undefined') return false;
-    const path = window.location.pathname;
-    return path !== '/' && path !== '' && path !== '/index.html';
-  };
-
-  const [isNotFound, setIsNotFound] = useState(getIsNotFound);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      setIsNotFound(getIsNotFound());
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  const handleReturnHome = () => {
-    if (typeof window !== 'undefined') {
-      window.history.pushState({}, '', '/');
-    }
-    setIsNotFound(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  if (isNotFound) {
-    return (
-      <div className="min-h-screen bg-[#121114]">
-        <NotFoundPage
-          onReturnHome={handleReturnHome}
-          onOpenSchedule={() => setScheduleModalOpen(true)}
-        />
-        <ScheduleModal
-          isOpen={scheduleModalOpen}
-          onClose={() => setScheduleModalOpen(false)}
-        />
-        <FloatingWhatsApp />
-      </div>
-    );
-  }
 
   const scrollToContact = (customMessage?: string) => {
     if (customMessage) {
