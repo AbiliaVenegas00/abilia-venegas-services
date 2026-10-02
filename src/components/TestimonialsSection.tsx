@@ -5,10 +5,10 @@ import { TESTIMONIALS_DATA } from '../data/portfolioData';
 // Helper to reliably resolve paths across local preview, root domains, and GitHub Pages subpaths
 const resolveAvatarPath = (avatar: string) => {
   if (!avatar) return '';
-  if (avatar.startsWith('http://') || avatar.startsWith('https://')) {
+  if (avatar.startsWith('http://') || avatar.startsWith('https://') || avatar.startsWith('data:')) {
     return avatar;
   }
-  const cleanPath = avatar.startsWith('./') ? avatar.slice(2) : avatar.startsWith('/') ? avatar.slice(1) : avatar;
+  const cleanPath = avatar.replace(/^(public\/|\.\/|\/)/, '');
   const baseUrl = import.meta.env.BASE_URL || './';
   return baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
 };
@@ -80,14 +80,13 @@ export const TestimonialsSection: React.FC = () => {
                     loading="lazy"
                     onError={(e) => {
                       const target = e.currentTarget;
-                      // If it ended in .jpeg, try .jpg in case user uploaded .jpg
+                      // Fallback extension check
                       if (target.src.endsWith('.jpeg')) {
-                        target.src = target.src.replace('.jpeg', '.jpg');
+                        target.src = target.src.replace(/\.jpeg$/, '.jpg');
                         return;
                       }
-                      // If it ended in .jpg, try .png
                       if (target.src.endsWith('.jpg')) {
-                        target.src = target.src.replace('.jpg', '.png');
+                        target.src = target.src.replace(/\.jpg$/, '.png');
                         return;
                       }
                       // Fallback in case of local load issue

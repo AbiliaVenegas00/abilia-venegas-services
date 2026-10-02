@@ -29,11 +29,31 @@ export default function App() {
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [prefilledMessage, setPrefilledMessage] = useState('');
 
-  // Check if current path should trigger the 404 page
+  // Robust path detection supporting localhost, custom domains, and GitHub Pages subpaths (/abilia-venegas-services/)
+  const getBasePath = () => {
+    if (typeof window === 'undefined') return '';
+    if (window.location.pathname.startsWith('/abilia-venegas-services')) {
+      return '/abilia-venegas-services';
+    }
+    return '';
+  };
+
   const getIsNotFound = () => {
     if (typeof window === 'undefined') return false;
-    const path = window.location.pathname;
-    return path !== '/' && path !== '' && path !== '/index.html';
+    
+    // Normalize path by stripping trailing slash
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    
+    // Valid homepage paths across localhost, root domain, and GitHub Pages subpath
+    const validHomePaths = [
+      '',
+      '/',
+      '/index.html',
+      '/abilia-venegas-services',
+      '/abilia-venegas-services/index.html'
+    ];
+    
+    return !validHomePaths.includes(path);
   };
 
   const [isNotFound, setIsNotFound] = useState(getIsNotFound);
@@ -47,8 +67,10 @@ export default function App() {
   }, []);
 
   const handleReturnHome = () => {
+    const basePath = getBasePath();
+    const targetUrl = basePath ? `${basePath}/` : '/';
     if (typeof window !== 'undefined') {
-      window.history.pushState({}, '', '/');
+      window.history.pushState({}, '', targetUrl);
     }
     setIsNotFound(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });

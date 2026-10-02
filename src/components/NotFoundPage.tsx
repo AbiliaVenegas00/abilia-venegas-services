@@ -139,7 +139,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onReturnHome, onOpen
               </button>
 
               <a
-                href="https://wa.me/524491986427?text=Hola%20Abilia,%20llegue%20a%20tu%20sitio%20y%20me%20gustaria%20platicar."
+                href="https://wa.me/524622450193?text=Hola%20Abilia,%20llegue%20a%20tu%20sitio%20y%20me%20gustaria%20platicar."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-3 py-1.5 rounded-lg transition-colors"

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirigiendo al portafolio | Abilia Venegas</title>
+    <script>
+      // Redirige al inicio del repositorio en GitHub Pages o a la raíz si es un dominio personalizado
+      var isRepoSubpath = window.location.pathname.includes('abilia-venegas-services');
+      var targetPath = isRepoSubpath ? '/abilia-venegas-services/' : '/';
+      window.location.replace(window.location.origin + targetPath);
+    </script>
+  </head>
+  <body style="background-color: #121114; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <div style="text-align: center;">
+      <p style="font-size: 16px; color: #2DD4BF;">Redirigiendo al portafolio de Abilia Venegas...</p>
+    </div>
+  </body>
+</html>
